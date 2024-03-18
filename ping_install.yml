@@ -1,0 +1,12 @@
+---
+  - name: "Check hosts accessibility"
+    hosts: localhost
+
+    tasks:
+      - name: "test reachability"
+        ansible.builtin.ping:
+
+      - name: "find module"
+        ansible.builtin.find:
+          path: .
+          file_type: file
